@@ -1,17 +1,29 @@
 <x-layouts.app :title="__('home.pageTitle')">
-    <header>
-        <h1>{{ __('home.title') }}</h1>
-        <p>{{ __('home.intro') }}</p>
+    <header class="hero content">
+        <h1 class="hero__title">{{ __('home.title') }}</h1>
+        <p class="hero__subtitle">{{ __('home.intro') }}</p>
     </header>
-    <main>
+    <main class="main content">
         <div>
            <form action="{{ request('url') }}">
-                <input type="search" name="search" id="search" placeholder="{{ __('home.filters.searchEmpty') }}">
+                <fieldset>
+                    <label for="search">{{ __('home.filters.search') }}</label>
+                    <input type="search"
+                        name="search"
+                        id="search"
+                        placeholder="{{ __('home.filters.searchEmpty') }}"
+                    >
+                </fieldset>
                 <fieldset>
                 <legend>{{ __('home.filters.tagEmpty') }}</legend>
                 @foreach($tags as $tag)
                     <div>
-                        <input type="checkbox" id="{{ $tag->slug }}" name="tags[]" value="{{ $tag->slug }}">
+                        <input
+                            type="checkbox"
+                            id="{{ $tag->slug }}"
+                            name="tags[]"
+                            value="{{ $tag->slug }}"
+                        >
                         <label for="{{ $tag->slug }}">{{ $tag->name }}</label>
                     </div>
                 @endforeach

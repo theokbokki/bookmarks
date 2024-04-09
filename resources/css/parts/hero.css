@@ -1,0 +1,15 @@
+.hero {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 1.5rem;
+    line-height: 120%;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.hero__subtitle {
+    color: var(--grey-500);
+}

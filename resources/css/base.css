@@ -1,0 +1,11 @@
+.app {
+    display: grid;
+    grid-template-columns:
+        [full-start] 1fr
+        [content-start] min(calc(100vw - 2rem), 50rem)
+        [content-end] 1fr
+        [full-end];
+    padding: 5rem 0;
+    color: var(--grey-700);
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
