@@ -8,9 +8,11 @@
     </h4>
     <p>{{ $date->diffForHumans() }}</p>
     <p>{{ $description }}</p>
+    @if(count($tags))
     <div>
-    @foreach($tags as $tag)
+        @foreach($tags as $tag)
         <x-tag>{{ $tag->name }}</x-tag>
-    @endforeach
+        @endforeach
     </div>
+    @endif
 </article>
