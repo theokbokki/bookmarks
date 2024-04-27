@@ -1,15 +1,19 @@
 .hero {
-    margin-bottom: 5rem;
+    max-width: 20rem;
+    margin: 0 auto 5rem;
     text-align: center;
 }
 
 .hero__title {
+    margin-bottom: 1rem;
+    color: var(--grey-800);
+    font-family: var(--geist-mono);
     font-size: 1.5rem;
     line-height: 120%;
-    font-weight: bold;
-    margin-bottom: .5rem;
+    font-weight: 700;
 }
 
 .hero__subtitle {
     color: var(--grey-500);
+    line-height: 150%;
 }

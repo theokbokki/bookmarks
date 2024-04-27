@@ -8,12 +8,7 @@
             <form action="{{ request('url') }}"
                 class="filters__form"
             >
-                <fieldset class="filters__item">
-                    <label for="search"
-                        class="filters__label"
-                    >
-                        {{ __('home.filters.search') }}
-                    </label>
+                <fieldset class="filters__item filters__search">
                     <input type="search"
                         name="search"
                         id="search"
@@ -27,7 +22,6 @@
                         name="checkbox-toggle"
                         id="checkbox-toggle"
                     >
-                    <p>Tags</p>
                     <label for="checkbox-toggle"
                         class="filters__input"
                     >
@@ -57,7 +51,7 @@
                 </button>
            </form>
         </div>
-        <div>
+        <div class="bookmarks">
         @foreach($bookmarks as $bookmark)
             <x-bookmark
                 :title="$bookmark->title"

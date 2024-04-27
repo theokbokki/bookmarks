@@ -6,8 +6,7 @@ return [
     'intro' => 'The place where I store and sort all the stuff I find interesting.',
     'filters' => [
         'tagEmpty' => 'Choose one or more tags',
-        'search' => 'Search',
-        'searchEmpty' => 'Search in the titles and descriptions',
+        'searchEmpty' => 'Search',
         'submit' => 'submit',
     ],
 ];

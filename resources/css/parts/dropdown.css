@@ -4,24 +4,17 @@
 
 .filters__toggle:checked ~ .dropdown {
     position: absolute;
-    top: 3.5rem;
+    top: 2.5rem;
     left: 0;
     right: 0;
     z-index: 10;
     background: var(--white);
     display: grid;
-    gap: .25rem;
     padding: .5rem;
-    height: 6rem;
+    height: 8.25rem;
     overflow: scroll;
     border-radius: .25rem;
-    border: 0.0625rem solid var(--grey-300);
-}
-
-.dropdown__item {
-    display: flex;
-    gap: .5rem;
-    align-items: center;
+    border: 1px solid var(--grey-200);
 }
 
 .dropdown__input:checked + .dropdown__label {
@@ -29,9 +22,10 @@
 }
 
 .dropdown__label {
-    flex: 1;
-    padding: .25rem;
-    border-radius: .125rem;
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    border-radius: .25rem;
     transition: background 200ms ease-in-out;
 }
 

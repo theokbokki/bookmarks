@@ -1,0 +1,9 @@
+.tag {
+    padding: .25rem .5rem;
+    border: 1px solid var(--grey-200);
+    font-size: 0.75rem;
+    border-radius: .25rem;
+    color: var(--grey-500);
+    line-height: 120%;
+    min-width: max-content;
+}

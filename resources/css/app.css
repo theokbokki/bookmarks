@@ -3,7 +3,10 @@
 @import 'base';
 
 @import 'config/colors';
+@import 'config/fonts';
 
 @import 'parts/hero';
 @import 'parts/filters';
 @import 'parts/dropdown';
+@import 'parts/bookmark';
+@import 'parts/tag';

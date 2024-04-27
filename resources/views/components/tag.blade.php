@@ -1,1 +1,1 @@
-<p>{{ $slot }}</p>
+<p class="tag">{{ $slot }}</p>
