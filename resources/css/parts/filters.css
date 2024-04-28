@@ -12,6 +12,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    max-width: calc(100vw - 3rem);
 }
 
 .filters__input {
@@ -71,6 +72,12 @@
     align-items: center;
 }
 
+.filters__toggle ~ .filters__input {
+    max-width: calc(100vw - 3rem);
+    overflow: scroll;
+    gap: 0.25rem;
+}
+
 .filters__submit {
     position: relative;
     z-index: 1;
@@ -112,10 +119,15 @@
     }
 
     .filters__item {
+        width: 18.125rem;
         max-width: 18.125rem;
     }
 
     .filters__submit {
         margin-left: auto;
+    }
+
+    .filters__toggle ~ .filters__input {
+        max-width: 18.125rem;
     }
 }

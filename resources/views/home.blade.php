@@ -52,6 +52,7 @@
            </form>
         </div>
         <div class="bookmarks">
+        @fragment('bookmarks')
         @foreach($bookmarks as $bookmark)
             <x-bookmark
                 :title="$bookmark->title"
@@ -61,6 +62,7 @@
                 :tags="$bookmark->tags"
             />
         @endforeach
+        @endfragment
         </div>
     </main>
 </x-layouts.app>

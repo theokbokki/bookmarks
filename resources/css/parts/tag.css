@@ -7,3 +7,25 @@
     line-height: 120%;
     min-width: max-content;
 }
+
+label > .tag {
+    position: relative;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: var(--grey-100);
+    cursor: pointer;
+}
+
+label > .tag:before {
+    content: "";
+    position: absolute;
+    right: .5rem;
+    width: .625rem;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 18 18 6M6 6l12 12' /%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: invert(46%) sepia(20%) saturate(146%) hue-rotate(342deg) brightness(92%) contrast(86%);
+}

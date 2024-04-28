@@ -14,7 +14,8 @@ class HomeController extends Controller
         return view('home', [
             'bookmarks' => $this->getBookmarks($request),
             'tags' => Tag::all(),
-        ]);
+        ])
+        ->fragmentIf($request->ajax(), 'bookmarks');
     }
 
     private function getBookmarks(Request $request): Collection
