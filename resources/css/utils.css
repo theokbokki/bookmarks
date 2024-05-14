@@ -7,15 +7,3 @@
     white-space: nowrap;
     width: 1px;
 }
-
-.content {
-    grid-column: content;
-}
-
-.breakout {
-    grid-column: breakout;
-}
-
-.full {
-    grid-column: full;
-}

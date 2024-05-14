@@ -5,7 +5,7 @@ return [
     'title' => 'Bookmarks',
     'intro' => 'The place where I store and sort all the stuff I find interesting.',
     'filters' => [
-        'tagEmpty' => 'Choose one or more tags',
+        'tagEmpty' => 'Choose tags',
         'searchEmpty' => 'Search',
         'submit' => 'submit',
     ],

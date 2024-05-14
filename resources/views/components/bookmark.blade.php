@@ -7,12 +7,15 @@
             {{ $title }}
         </a>
     </h4>
-    <p class="bookmark__date">{{ $date->diffForHumans() }}</p>
     <p class="bookmark__description">{{ $description }}</p>
     @if(count($tags))
     <div class="bookmark__tags">
        @foreach($tags as $tag)
-        <x-tag>{{ $tag->name }}</x-tag>
+        <x-tag
+            :color="$tag->color"
+        >
+            {{ $tag->name }}
+        </x-tag>
         @endforeach
     </div>
     @endif

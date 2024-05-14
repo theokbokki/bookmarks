@@ -10,4 +10,39 @@
     --grey-50: #fafaf9;
 
     --white: #ffffff;
+
+    --rose-100: #ffe4e6;
+    --rose-600: #e11d48;
+    --pink-100: #fce7f3;
+    --pink-600: #db2777;
+    --fuchsia-100: #fae8ff;
+    --fuchsia-600: #c026d3;
+    --purple-100: #f3e8ff;
+    --purple-600: #9333ea;
+    --violet-100: #ede9fe;
+    --violet-600: #7c3aed;
+    --indigo-100: #e0e7ff;
+    --indigo-600: #4f46e5;
+    --blue-100: #dbeafe;
+    --blue-600: #2563eb;
+    --sky-100: #e0f2fe;
+    --sky-600: #0284c7;
+    --cyan-100: #cffafe;
+    --cyan-600: #0891b2;
+    --teal-100: #ccfbf1;
+    --teal-600: #0d9488;
+    --emerald-100: #d1fae5;
+    --emerald-600: #059669;
+    --green-100: #dcfce7;
+    --green-600: #16a34a;
+    --lime-100: #ecfccb;
+    --lime-600: #65a30d;
+    --yellow-100: #fef9c3;
+    --yellow-600: #eab308;
+    --amber-100: #fef3c7;
+    --amber-600: #d97706;
+    --orange-100: #ffedd5;
+    --orange-600: #ea580c;
+    --red-100: #fee2e2;
+    --red-600: #dc2626;
 }

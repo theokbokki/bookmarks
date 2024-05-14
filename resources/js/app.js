@@ -7,9 +7,7 @@ class App {
     constructor () {
         this.getElements();
         this.setEventListeners();
-
-        this.submitButton.remove();
-        this.tags = [];
+        this.setDefaults();
     }
 
     getElements() {
@@ -19,6 +17,7 @@ class App {
         this.dropdown = document.querySelector('.dropdown');
         this.bookmarks = document.querySelector('.bookmarks');
         this.toggle = document.querySelector('[for="checkbox-toggle"]');
+        this.toggleText = this.toggle.querySelector('.filters__input--placeholder');
         this.checkboxToggle = document.querySelector('[name="checkbox-toggle"]');
     }
 
@@ -29,7 +28,8 @@ class App {
         ).bind(this));
 
         this.dropdown.addEventListener('click', (e) => {
-            if(e.target.tagName.toLowerCase() === 'input') {
+            // Checking if the target is an input to avoid double event firing
+            if (e.target.tagName.toLowerCase() === 'input') {
                 this.handleTags(e);
             }
         });
@@ -42,7 +42,6 @@ class App {
         this.toggle.addEventListener('click', (e) => {
             if (e.target.matches('.tag')) {
                 e.preventDefault();
-                e.target.remove();
                 this.handleTags(e);
             }
         });
@@ -60,18 +59,24 @@ class App {
         })
     }
 
+    setDefaults() {
+        this.submitButton.remove();
+        this.tags = [];
+    }
+
     handleSearch(e) {
         this.searchValue = e.target.value;
         this.handleRequest();
     }
 
     handleTags(e) {
-        const value = e.target.value ?? e.target.innerText;
+        const value = e.target.value ?? e.target.dataset.name;
         const index = this.tags.indexOf(value);
 
         if (index > -1) {
             this.tags.splice(index, 1);
             document.querySelector(`[value="${value}"]`).checked = false;
+            document.getElementById(value+'-close').style.display = 'none';
         } else {
             this.tags.push(value);
         }
@@ -82,17 +87,17 @@ class App {
 
     handleSelect() {
         if (!this.tags.length) {
-            this.toggle.innerText = 'Choose one or more tags'
-            this.toggle.style.paddingLeft = '1rem';
+            this.toggleText.style.display = 'block';
+            this.toggle.style.paddingTop = '1.25rem';
+            this.toggle.style.paddingBottom = '1.25rem';
         } else {
-            let tagsElements = '';
             this.tags.forEach(tag => {
-                let el = `<span class="tag tag--close">${tag}</span>`;
-                tagsElements += el;
+                document.getElementById(tag+'-close').style.display = 'inline-flex';
             });
 
-            this.toggle.innerHTML = tagsElements;
-            this.toggle.style.paddingLeft = '.25rem';
+            this.toggleText.style.display = 'none';
+            this.toggle.style.paddingTop = '1rem';
+            this.toggle.style.paddingBottom = '1rem';
         }
     }
 

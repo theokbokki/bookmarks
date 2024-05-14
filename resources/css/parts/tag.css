@@ -1,31 +1,25 @@
-.tag {
-    padding: .25rem .5rem;
-    border: 1px solid var(--grey-200);
-    font-size: 0.75rem;
-    border-radius: .25rem;
-    color: var(--grey-500);
-    line-height: 120%;
-    min-width: max-content;
+:root {
+  --test-color: #ff0000; /* Define your CSS variable */
 }
 
-label > .tag {
+.tag {
+    padding: .25rem .5rem;
+    font-family: var(--geist-mono);
+    font-size: 0.75rem;
+}
+
+.tag--close {
     position: relative;
-    padding-right: 1.5rem;
-    display: flex;
+    display: none;
+    min-width: max-content;
+    gap: .5rem;
     align-items: center;
-    border: none;
-    background: var(--grey-100);
     cursor: pointer;
 }
 
-label > .tag:before {
-    content: "";
-    position: absolute;
-    right: .5rem;
-    width: .625rem;
-    height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M6 18 18 6M6 6l12 12' /%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: invert(46%) sepia(20%) saturate(146%) hue-rotate(342deg) brightness(92%) contrast(86%);
+.tag--close-icon {
+    width: 0.75rem;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
 }
