@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\BookmarkResource\Pages;
 use App\Filament\Resources\BookmarkResource\RelationManagers;
+use App\Forms\Components\SpatieTagsInputColor;
 use App\Models\Bookmark;
 use Filament\Forms;
 use Filament\Forms\Components\SpatieTagsInput;
@@ -45,7 +46,7 @@ class BookmarkResource extends Resource
                     ->required()
                     ->url(),
 
-                SpatieTagsInput::make('tags'),
+                SpatieTagsInputColor::make('tags'),
             ]);
     }
 
